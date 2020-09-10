@@ -118,6 +118,7 @@ func OpenReader(r io.Reader, opt ...Options) (*File, error) {
 			return nil, fmt.Errorf("decrypted file failed")
 		}
 	}
+	fmt.Println("code got here2")
 	zr, err := zip.NewReader(bytes.NewReader(b), int64(len(b)))
 	if err != nil {
 		return nil, err

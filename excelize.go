@@ -122,6 +122,7 @@ func OpenReader(r io.Reader, opt ...Options) (*File, error) {
 	if err != nil {
 		return nil, err
 	}
+	fmt.Println("code got here")
 
 	file, sheetCount, err := ReadZipReader(zr)
 	if err != nil {
